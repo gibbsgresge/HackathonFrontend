@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           });
 
           document.getElementById("signupBtn").addEventListener("click", () => {
-              window.location.href = "signup.html";
+              window.location.href = "register.html";
           });
       }
   }

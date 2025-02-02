@@ -1,0 +1,349 @@
+/* styles.css */
+
+/* Define default theme colors */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #FFFFFF;
+    --accent-color: #e74c3c;
+    --accent-color1: #e74c3c;
+    --accent-color2: #e74c3c;
+  }
+  
+  /* Global Styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Header styling using the secondary color */
+  .header {
+    background-color: var(--accent-color1);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Container for the theme packs */
+  .theme-pack-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Styling for each theme pack card */
+  .theme-pack {
+    background: #fff;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  
+  .theme-pack:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Color swatch preview within each card */
+  .color-swatch {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+
+  .login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Background styling for login page */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Login container */
+.login-container {
+  width: 350px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heading */
+.login-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+  margin: auto;
+  padding: 1%;
+  width: 90%;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Error message */
+#errorMessage {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Register text */
+.register-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-text a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* Background styling for sign-up page */
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+
+
+
+/* Create Page Layout */
+.create-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Color Picker Section */
+.color-picker {
+  width: 30%;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.color-picker h2 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+#colorWheel {
+  width: 100%;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+buttonLike {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+buttonLike:hover {
+  background-color: var(--accent-color);
+}
+
+buttonLike i {
+  transition: fill 0.3s;
+}
+
+/* Hover effect on icon only */
+buttonLike:hover i {
+  color: var(--accent-color); /* Change color of icon when hovered */
+}
+
+
+/* Color Pack Preview Section */
+.color-pack-preview {
+  width: 60%;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field */
+#packName {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Color Selection Display */
+.color-display {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Clickable Color Boxes */
+.color-box {
+  width: 23%;
+  height: 100px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Default shadow */
+}
+
+/* Highlight effect when a color box is clicked */
+.color-box.selected {
+  box-shadow: 0px 0px 10px 4px rgba(52, 152, 219, 0.75); /* Blue glow */
+  border: 3px solid var(--primary-color);
+  outline: 2px solid rgba(52, 152, 219, 0.4); /* Extra subtle glow */
+}
+
+#loginBtn {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+#signupBtn {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+#profileBtn {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+#logoutBtn {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+#reset {
+  color: var(--secondary-color);
+}
+
+.footer {
+  background-color: var(--accent-color1);
+  padding: 1rem;
+  text-align: center;
+}
+
+#createBtn {
+  background-color: var(--accent-color);
+  padding: 1rem;
+  text-align: center;
+}

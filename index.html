@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scheme Scraper</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="./paint-roller-solid.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body class="text-gray-900">
+
+ <!-- Header with Navbar -->
+ <header class="text-white text-3xl py-4 px-8 flex justify-between items-center">
+  <h1 id="reset" class="text-3xl font-bold cursor-pointer">Scheme Scraper</h1>
+  
+  <!-- Dynamic Navigation -->
+  <nav>
+    <ul id="nav-links" class="flex space-x-4">
+      <li><button id="loginBtn" class="px-4 py-2 rounded-lg font-bold hover:bg-gray-200">Login</button></li>
+      <li><button id="signupBtn" class="px-4 py-2 rounded-lg font-bold hover:bg-gray-200">Sign Up</button></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Search Bar -->
+  <div class="flex flex-col justify-center items-center my-6 space-y-4">
+    <a id='cbtn' class="hidden" href="create.html">
+      <button id="createBtn" class="text-white text-2xl px-4 py-2 rounded-lg font-bold">Create a Scheme</button>
+    </a>
+    <input
+      type="text"
+      id="searchInput"
+      class="color-black w-1/2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder="Search theme packs by name..."
+    />
+  </div>
+
+  <!-- Theme Pack Cards Container -->
+  <div id="themeCards" class="px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+    <!-- Theme packs will be inserted dynamically here -->
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="text-white text-center py-4">
+    <p>&copy; 2025 Gibbs Gresge, Tommy Rosselli, Jackson Small</p>
+  </footer>
+
+  <script src="scripts/search.js"></script>
+  <script src="scripts/dynamicCardPack.js"></script>
+  <script src="scripts/resetscheme.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/interactionHandler.js"></script>
+  <script>
+    function copyToClipboard(color, element) {
+        navigator.clipboard.writeText(color).then(() => {
+            const tooltip = element.nextElementSibling;
+            const originalText = tooltip.innerText;
+    
+            tooltip.innerText = "Copied!";
+            tooltip.classList.remove("opacity-0");
+
+            setTimeout(() => {
+                tooltip.innerText = originalText;
+                tooltip.classList.add("opacity-0");
+            }, 400);
+        }).catch(err => console.error("Failed to copy:", err));
+    }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () { 
+      const authToken = localStorage.getItem("token"); // Change to sessionStorage if needed
+
+      if (authToken) {
+        console.log(document.getElementById('cbtn').classList)
+        document.getElementById('cbtn').classList.remove('hidden');
+      }
+
+    });
+  </script>
+</body>
+</html>
